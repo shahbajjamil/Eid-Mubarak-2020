@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Tangerine:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* -------------for auto play audio ------------------ */
+iframe {
+    display: none;
+}
+.preloader {
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    font-family: 'Bad Script', cursive;
+    z-index: 10000;
+}
+.preloader h1 {
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-size: 16em;
+}
+.preloader h1 span {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    animation: animate 2s linear infinite;
+}
+.preloader.active{
+    transform: translateY(100vh);
+    transition: ease-in-out 3s;
+    transition-delay: 1s;
+}
+h1 span:nth-child(1) {
+    animation-delay: 0s;
+}
+h1 span:nth-child(2) {
+    animation-delay: 0s;
+}
+h1 span:nth-child(3) {
+    animation-delay: 0s;
+}
+h1 span:nth-child(4) {
+    animation-delay: 1s;
+}
+h1 span:nth-child(5) {
+    animation-delay: 1s;
+}
+h1 span:nth-child(6) {
+    animation-delay: 1s;
+}
+h1 span:nth-child(7) {
+    animation-delay: 1s;
+}
+h1 span:nth-child(8) {
+    animation-delay: 1s;
+}
+h1 span:nth-child(9) {
+    animation-delay: 1s;
+}
+h1 span:nth-child(10) {
+    animation-delay: 1s;
+}
+
+@keyframes animate {
+    0%,100% {
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 30px #00b3ff,
+                     0 0 30px #00b3ff;
+    }
+    5%,95% {
+        color: #111;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Tangerine', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#ffeb3b, #e91e63);
+}
+section h2 {
+    position: relative;
+    text-align: center;
+    font-size: 160px;
+    color: #fff;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+section h2 span {
+    font-size: 30px;
+    font-family: sans-serif;
+}
+section h2::before {
+    content: '';
+    position: absolute;
+    top:-44px;
+    left:-100px;
+    width: 200px;
+    height: 200px;
+    background: transparent;
+    border-left: 15px solid #fff;
+    border-radius: 50%;
+    transform: rotate(-30deg);
+    box-shadow: -14px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.mosque {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: url(../assets/mosque.png);
+    background-repeat: repeat-x;
+    background-size: 1200px;
+    z-index: 1;
+    pointer-events: none;
+    animation: animate1 10s linear infinite;
+}
+@keyframes animate1 {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 1200px;
+        }
+}
+.mosque::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background: url(../assets/mosque.png);
+    background-repeat: repeat-x;
+    background-size: 1600px;
+    z-index: 1;
+    opacity: 0.1;
+    pointer-events: none;
+    animation: animateReverse 40s linear infinite;
+}
+@keyframes animateReverse {
+    0% {
+        background-position: 1600px;
+    }
+    100% {
+        background-position: 0;
+        }
+}
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 700px){
+    .preloader h1 {
+        font-size: 4.5em;
+    }
+    section h2 {
+        font-size: 70px;
+    }
+    section h2 span {
+        font-size: 15px;
+    }
+    section h2::before {
+        top:-144px;
+        left:110px;
+        width: 100px;
+        height: 100px;
+        box-shadow: -16px 1px 10px rgba(0, 0, 0, 0.1);
+    }
+    .mosque {
+        height: 300px;
+        background-size: 900px; 
+    }
+    @keyframes animate1 {
+        0% {
+            background-position: 0;
+        }
+        100% {
+            background-position: 900px;
+            }
+    }
+    .mosque::before {
+        height: 400px;
+        background-size: 1200px;
+    }
+    @keyframes animateReverse {
+        0% {
+            background-position: 1200px;
+        }
+        100% {
+            background-position: 0;
+            }
+    }
+}
