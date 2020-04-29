@@ -10,10 +10,7 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-/* -------------for auto play audio ------------------ */
-iframe {
-    display: none;
-}
+/* -------------for loading screen------------------ */
 .preloader {
     position: fixed;
     top:0;
