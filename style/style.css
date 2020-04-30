@@ -5,10 +5,14 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.page {
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* -------------for loading screen------------------ */
 .preloader {
@@ -170,7 +174,23 @@ section h2::before {
     width: 100%;
     height: 100%;
 }
+footer {
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+footer a {
+    text-decoration: none;
+    color: #9ee715;
+}
 @media (max-width: 700px){
+    footer {
+        font-size: 10px;
+    }
     .preloader h1 {
         font-size: 4.5em;
     }

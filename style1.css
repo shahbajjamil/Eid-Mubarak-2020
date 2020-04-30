@@ -18,6 +18,16 @@ h1 {
     padding: 20px;
     animation: head 1s infinite;
 }
+footer {
+    position: fixed;
+    bottom:0;
+    font-family: sans-serif;
+}
+
+footer a {
+    text-decoration: none;
+    color: #9ee715;
+}
 @keyframes head {
     0%,100% {
         transform: rotate(6deg)  ;
@@ -42,4 +52,8 @@ span {
         opacity: 1;
     }
 }
-
+@media (max-width: 500px) {
+    footer {
+        font-size: 0.8em;
+    }
+}
