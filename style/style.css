@@ -154,6 +154,7 @@ section h2 span {
 section p {
     position: relative;
     text-align: center;
+    color: #fff;
 }
 section h2::before {
     content: '';
