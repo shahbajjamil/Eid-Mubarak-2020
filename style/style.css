@@ -261,7 +261,10 @@ footer a {
         font-size: 70px;
     }
     section h2 span {
-        font-size: 15px;
+        font-size: 20px;
+    }
+    section p {
+        font-size: 20px;
     }
     section h2::before {
         top:-144px;
